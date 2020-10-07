@@ -1,0 +1,12 @@
+<div class="widget__container">
+  <div class="widget__col" *ngFor="let widget of widgetData">
+    <div class="widget__col__icon">
+      <i
+        [outerHTML]="widget.icon"
+      ></i>
+    </div>
+    <div class="widget__col__text">
+      <span *ngFor="let text of widget.textArr">{{text}}</span>
+    </div>
+  </div>
+</div>

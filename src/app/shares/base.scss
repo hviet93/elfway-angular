@@ -1,0 +1,74 @@
+$color-orange: #F6A64D;
+$color-green: #8BA73B;
+$color-highlight: rgb(139,167,59);
+$color-text: #626262;
+$color-border: #edecec;
+$color-backcolor-icon: #f2f4ec;
+$color-btn-banner--hover: #7f9643;
+$border-style: 1px solid #e0dada;
+
+
+.highlight-text {
+  color: $color-highlight;
+}
+
+.required {
+  color: red;
+}
+
+.social__icon__style {
+  cursor: pointer;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+
+@mixin input-style--search {
+  border: 2px solid lightgray;
+  border-radius: 5rem;
+  padding: {
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: 2rem;
+    right: 12rem;
+  }
+  outline: none;
+}
+
+@mixin input-style {
+  outline: none;
+  border: 2px solid lightgray;
+  padding: 2rem;
+  border-radius: 5rem;
+  transition: .4s;
+  font-size: 1.4rem;
+}
+
+@mixin input-style--focus {
+  border: 2px solid $color-highlight;
+  transition: .4s;
+}
+
+@mixin banner-btn {
+  border: none;
+  background-color: $color-highlight;
+  font-size: 1.6rem;
+  padding: 2rem 0;
+  border-radius: 5rem;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: .4s;
+}
+
+@mixin banner-btn--hover {
+  background-color: $color-btn-banner--hover;
+  transition: .4s;
+}
+

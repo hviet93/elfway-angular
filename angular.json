@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "elfway-demo"
+    }
+  },
+  "defaultProject": "elfway-demo",
+  "cli": {
+    "analytics": "4b822aea-b4e8-488c-9e8e-10ba1957ee8d"
+  }
 }

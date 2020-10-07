@@ -1,0 +1,9 @@
+<div class="home__page__container">
+  <app-widget></app-widget>
+  <app-medium-banner></app-medium-banner>
+  <!--Products Section-->
+  <app-large-banner></app-large-banner>
+  <app-banner-story *ngIf="!isMediumSize"></app-banner-story>
+  <app-banner-story-medium *ngIf="isMediumSize"></app-banner-story-medium>
+  <app-home-elementor></app-home-elementor>
+</div>

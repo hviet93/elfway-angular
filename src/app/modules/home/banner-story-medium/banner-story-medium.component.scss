@@ -1,0 +1,68 @@
+@import 'src/app/shares/base';
+
+.banner__story__medium__container {
+  width: 100%;
+  margin-top: 3rem;
+  position: relative;
+
+  .banner__story__medium__bg {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .banner__story__medium__text {
+    width: 50%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, .8);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: .5rem;
+    padding: 2rem 3rem;
+
+    .story__text__title-normal {
+      transform: rotate(-90deg);
+      width: 95%;
+      margin-top: 5rem;
+      margin-left: -5rem;
+      color: $color-highlight;
+    }
+
+    .story__text__content {
+      margin-left: -4rem;
+
+      .text__content__title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .text__content__paragraph {
+        font-size: 1.4rem;
+        color: $color-text;
+        margin-bottom: 2rem;
+      }
+
+      .text__content__logo {
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .banner__story__medium__container {
+
+    .banner__story__medium__text {
+      width: 65%;
+      height: 85%;
+    }
+  }
+}

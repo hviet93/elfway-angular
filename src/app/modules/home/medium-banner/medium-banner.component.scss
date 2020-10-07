@@ -1,0 +1,126 @@
+@import 'src/app/shares/base';
+
+.medium__banner__container {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .medium__banner {
+    position: relative;
+    width: 49%;
+    overflow: hidden;
+
+    .medium__banner__bg--img {
+      width: 100%;
+
+      .medium__banner__bg-color {
+        width: 100%;
+        height: 36rem;
+        background-color: #000;
+        transform: scale(1.2);
+        opacity: .3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: .4s;
+      }
+
+      img {
+        width: 100%;
+        height: 36rem;
+        transform: translateX(0) scale(1.2);
+        transition: .4s;
+      }
+
+      .flip__img {
+        transform: scaleX(-1) scale(1.2);
+      }
+    }
+
+    .medium__banner__content {
+      position: absolute;
+      top: 20%;
+      right: 0%;
+      width: 45%;
+      color: #fff;
+      z-index: 1;
+
+      .banner__content__header {
+        width: 100%;
+        font-size: 1.6rem;
+      }
+
+      .banner__content__paragraph {
+        font-size: 1.4rem;
+      }
+
+      .banner__content__action {
+        margin-top: 2rem;
+
+        button {
+          cursor: pointer;
+          outline: none;
+          padding: 1rem 2rem;
+          background: transparent;
+          font-size: 1.4rem;
+          color: #fff;
+          border: 2px solid #fff;
+          border-radius: 5rem;
+          transition: .4s;
+        }
+
+        button:hover {
+          border: 2px solid $color-highlight;
+          background-color: $color-highlight;
+          transition: .4s;
+        }
+      }
+    }
+  }
+
+  .medium__banner:hover {
+    .medium__banner__bg--img {
+      .medium__banner__bg-color {
+        opacity: .2;
+        transition: .4s;
+      }
+
+      .flip__img {
+        transform: translateX(-2%) scaleX(-1) scale(1.2);
+      }
+
+      img {
+        transform: translateX(-2%) scale(1.2);
+        transition: .4s;
+      }
+    }
+
+    .medium__banner__content {
+      .banner__content__header {
+        .first__header__color {
+          transition: .4s;
+          color: #000;
+        }
+
+        .second__header__color {
+          transition: .4s;
+          color: orange;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .medium__banner__container {
+    flex-wrap: wrap;
+
+    .medium__banner {
+      width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+}

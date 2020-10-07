@@ -1,0 +1,59 @@
+@import 'src/app/shares/base';
+
+.widget__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.6rem;
+
+  .widget__col {
+    background-color: #fff;
+    padding: 2rem;
+    width: 18%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: $color-text;
+    transition: .4s;
+
+    .widget__col__icon {
+      cursor: pointer;
+      width: 20%;
+      font-size: 3rem;
+      margin-right: 2rem;
+    }
+
+    .widget__col__icon:hover {
+      color: $color-highlight;
+      transition: .4s;
+    }
+
+    .widget__col__text {
+      cursor: pointer;
+      font-weight: bold;
+      width: 70%;
+      span {
+        display: block;
+      }
+    }
+    .widget__col__text:hover {
+      color: $color-highlight;
+      transition: .4s;
+    }
+
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .widget__container {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .widget__col {
+      margin-bottom: 2rem;
+      width: 30%;
+      margin-right: 2rem;
+    }
+  }
+}

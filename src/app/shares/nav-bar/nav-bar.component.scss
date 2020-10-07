@@ -1,0 +1,372 @@
+@import "src/app/shares/base";
+
+//Global Styles
+@mixin info--padding {
+  padding: 1rem;
+}
+
+@mixin content--padding {
+  padding: 2rem 1rem;
+}
+
+@mixin content--navigation--margin-top {
+  margin-top: 2rem;
+}
+
+@mixin transition--hover {
+  transition: .4s;
+}
+
+.header__container {
+  width: 100%;
+  background-color: #fff;
+  border-radius: .5rem;
+
+  .header__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: $color-text;
+    font-size: 1.4rem;
+    border-bottom: $border-style;
+
+    .header__info__offer {
+      width: 70%;
+      @include info--padding;
+      border-right: $border-style;
+    }
+
+    .header__info__location {
+      width: 10%;
+      @include info--padding;
+      border-right: $border-style;
+      @include transition--hover;
+    }
+
+    .header__info__location:hover {
+      color: $color-highlight;
+      @include transition--hover;
+    }
+
+    .header__info__phone {
+      width: 20%;
+      @include info--padding;
+      @include transition--hover;
+    }
+
+    .header__info__phone:hover {
+      color: $color-highlight;
+      @include transition--hover;
+    }
+  }
+
+  .header__content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .header__content__logo {
+      width: 20%;
+      @include content--padding;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 19.2rem;
+        height: 4.5rem;
+      }
+    }
+
+    .header__content__navigation {
+      width: 80%;
+      border-left: $border-style;
+      @include content--padding;
+
+      .content__navigation__search {
+        width: 100%;
+
+        .search__form {
+          width: 60%;
+          position: relative;
+
+          .search__form__input {
+            width: 100%;
+            @include input-style--search;
+            @include transition--hover;
+          }
+
+          .search__form__input:focus {
+            border: 2px solid $color-highlight;
+            @include transition--hover;
+          }
+
+          .search__form_btn {
+            cursor: pointer;
+            position: absolute;
+            top: 11%;
+            right: 1%;
+            padding: 1rem 3rem;
+            border: 1px solid $color-highlight;
+            background-color: $color-highlight;
+            border-radius: 5rem;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.4rem;
+            @include transition--hover;
+          }
+
+          .search__form_btn:hover {
+            background-color: $color-btn-banner--hover;
+            @include transition--hover;
+          }
+        }
+      }
+
+      .content__navigation__action {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        @include content--navigation--margin-top;
+
+        .action__icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%;
+          font-size: 1.6rem;
+          background-color: lightgray;
+        }
+
+        .notification {
+          width: 2.5rem;
+          height: 2.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #fff;
+          border-radius: 50%;
+        }
+
+        .navigation__action__login {
+          width: 14%;
+          position: relative;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          @include transition--hover;
+
+          .action__login__text {
+            width: 60%;
+            font-size: 1.4rem;
+            margin-left: 1rem;
+            font-weight: bold;
+          }
+
+          .action__login__form {
+            position: absolute;
+            top: 130%;
+            right: 0;
+            width: 250%;
+            background-color: #fff;
+            padding: 2rem;
+            font-size: 1.4rem;
+            color: #000;
+            border-radius: .5rem;
+            border-top: .5rem solid $color-highlight;
+            transition: .4s;
+            opacity: 0;
+            visibility: hidden;
+
+            .login__form__header {
+              width: 100%;
+              border-bottom: 1px solid #000;
+              padding: 1rem 0;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              span {
+
+              }
+
+              .login__form__header--left {
+                font-size: 1.6rem;
+                font-weight: bold;
+              }
+
+              .login__form__header--right {
+                a {
+                  text-decoration: none;
+                  color: $color-highlight;
+                }
+
+                a:hover {
+                  text-decoration: underline;
+                  text-decoration-color: $color-highlight;
+                }
+              }
+            }
+
+            .login__form {
+              width: 100%;
+              margin-top: 1rem;
+              padding: 1rem 0;
+
+               div {
+                padding: 1rem 0;
+
+                label {
+                  color: $color-text;
+                }
+
+                 input {
+                   margin-top: 1rem;
+                   width: 100%;
+                   @include input-style;
+                 }
+
+                 input:focus {
+                   @include input-style--focus;
+                 }
+              }
+
+              .login__form__username {
+                width: 100%;
+
+              }
+
+              .login__form__password {
+                width: 100%;
+              }
+
+              .login__form__action {
+                width: 100%;
+
+                button {
+                  width: 100%;
+                  @include banner-btn;
+                }
+
+                button:hover {
+                  @include banner-btn--hover;
+                }
+              }
+            }
+
+            .login__form__footer {
+              p {
+                text-align: left;
+
+                a {
+                  text-decoration: none;
+                  color: $color-highlight;
+                  font-size: 1.4rem;
+                }
+
+                a:hover {
+                  text-decoration: underline;
+                  text-decoration-color: $color-highlight;
+                }
+              }
+            }
+          }
+        }
+
+        .navigation__action__login:hover {
+          cursor: pointer;
+          @include transition--hover;
+          color: $color-highlight;
+
+          .action__login__form {
+            transition: .4s;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+
+        .navigation__action__wishlist {
+          width: 8%;
+          position: relative;
+          @include transition--hover;
+
+          .notification {
+            position: absolute;
+            top: 0;
+            left: 38%;
+            background-color: orange;
+          }
+        }
+
+        .navigation__action__wishlist:hover {
+          cursor: pointer;
+          color: $color-highlight;
+          @include transition--hover;
+        }
+
+        .navigation__action__cart {
+          width: 20%;
+          position: relative;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          @include transition--hover;
+
+          .notification {
+            position: absolute;
+            top: 0;
+            left: 16%;
+            background-color: $color-highlight;
+          }
+
+          .action__price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-left: 2.5rem;
+          }
+        }
+
+        .navigation__action__cart:hover {
+          cursor: pointer;
+          color: $color-highlight;
+          @include transition--hover;
+        }
+      }
+
+      .content__navigation__nav {
+        width: 100%;
+        @include content--navigation--margin-top;
+
+        .nav__list {
+          list-style: none;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          .nav__list--item {
+            margin-right: 2rem;
+
+            a {
+              text-decoration: none;
+              font-size: 1.6rem;
+              font-weight: bold;
+              color: black;
+              @include transition--hover;
+            }
+
+            a:hover {
+              color: $color-highlight;
+              @include transition--hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

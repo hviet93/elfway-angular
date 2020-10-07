@@ -1,0 +1,91 @@
+<footer class="footer__container">
+  <div class="footer__header">
+    <h1 class="footer__header__title">NEWSLETTER</h1>
+    <p class="footer__header__paragraph">
+      Subscribe to the weekly newsletter for all the latest updates
+    </p>
+    <form class="footer__header__subscribe">
+      <input
+        class="form__subscribe__input"
+        type="text"
+        placeholder="Your email address"
+      />
+      <button class="form__subscribe__btn" type="button">SUBSCRIBE</button>
+    </form>
+  </div>
+  <div class="footer__body">
+    <div class="footer__body__logo">
+      <div class="body__logo__img">
+        <img src="assets/footer/logo.svg" alt="Logo" />
+      </div>
+      <div class="body__logo__text">
+        <p>
+          Cras mattis consectetur purus sit amet fermentum.
+          Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+        </p>
+      </div>
+      <div class="body__logo__social">
+        <span class="social__icon__style">
+          <i class="fab fa-facebook"></i>
+        </span>
+        <span class="social__icon__style">
+          <i class="fab fa-twitter"></i>
+        </span>
+        <span class="social__icon__style">
+          <i class="fab fa-instagram"></i>
+        </span>
+        <span class="social__icon__style">
+          <i class="fab fa-google-plus-g"></i>
+        </span>
+        <span class="social__icon__style">
+          <i class="fab fa-linkedin-in"></i>
+        </span>
+      </div>
+    </div>
+    <div class="footer__body__col" *ngFor="let linkData of footerLinkData">
+      <div class="body__col__title">
+        <h3>{{linkData.title}}</h3>
+      </div>
+      <div class="body__col__list">
+        <ul>
+          <li *ngFor="let dataText of linkData.linkArr">
+            <a routerLink="#">{{dataText}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__body__contact">
+      <div class="body__contact__title">
+        <h3>Contact Us</h3>
+      </div>
+      <div class="body__contact__phone">
+        <div class="contact__phone__icon">
+          <i class="fas fa-headphones"></i>
+        </div>
+        <div class="contact__phone__detail">
+          <span>Through Whatsapp</span>
+          <span class="phone__detail--number">+084 008 46 789</span>
+        </div>
+      </div>
+      <div class="body__contact__address">
+        <p>
+          GymVast, 18 East 50th Street, 4th Floor, New York, NY 10022
+        </p>
+        <br/>
+        <p>
+          support@example.com
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="footer__bottom__copy-right">
+      <p>
+        Copyright © {{currentYear}} Efway. All Rights Reserved.
+      </p>
+    </div>
+    <div class="footer__bottom__payment">
+      <img src="assets/footer/payments.png" alt="payments"/>
+    </div>
+  </div>
+</footer>

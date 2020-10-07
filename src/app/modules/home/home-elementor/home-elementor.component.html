@@ -1,0 +1,17 @@
+<div class="home__elementor__container">
+  <div class="home__elementor__col" *ngFor="let ele of elementorData">
+    <div class="elementor__col__header">
+      <div class="col__header__icon">
+        <i [outerHTML]="ele.icon"></i>
+      </div>
+      <div class="col__header__title">
+        <span *ngFor="let t of ele.title">{{t}}</span>
+      </div>
+    </div>
+    <div class="elementor__col__text">
+      <p>
+        {{ele.content}}
+      </p>
+    </div>
+  </div>
+</div>

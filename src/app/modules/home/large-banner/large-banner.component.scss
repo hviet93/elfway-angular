@@ -1,0 +1,89 @@
+@import "src/app/shares/base";
+
+.large__banner__container {
+  position: relative;
+  margin-top: 3rem;
+  width: 100%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    transform: scale(1.2) translateX(0);
+    transition: .4s;
+  }
+
+  .large__banner__text {
+    width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .banner__text__normal {
+      width: 100%;
+      color: #f4a56c;
+      margin-bottom: 1.2rem;
+
+      p {
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: bold;
+      }
+    }
+
+    .banner__text__large {
+      width: 100%;
+      margin-bottom: 1.2rem;
+
+      h2 {
+        font-size: 2.6rem;
+        color: #000;
+        transition: .4s;
+      }
+    }
+
+    .banner__text__action {
+      width: 100%;
+
+      button {
+        @include banner-btn;
+        width: 12rem;
+        height: 2rem;
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      button:hover {
+        @include banner-btn--hover;
+      }
+    }
+  }
+}
+
+.large__banner__container:hover {
+
+  img {
+    transform: translateX(-5%) scale(1.2);
+    transition: .4s;
+  }
+
+  .large__banner__text {
+    .banner__text__large {
+      h2 {
+        color: #f4a56c;
+        transition: .4s;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .large__banner__container {
+
+    .large__banner__text {
+      width: 25%;
+    }
+  }
+}

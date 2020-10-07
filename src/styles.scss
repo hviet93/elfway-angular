@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.7;
+
+  body {
+    background-color: #f2f4ec;
+    background-image: url("./assets/bg-body.png");
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    margin: 2rem auto;
+    max-width: 128rem;
+    //max-height: 100vh;
+  }
+}
