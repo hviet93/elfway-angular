@@ -2,6 +2,9 @@
   <app-widget></app-widget>
   <app-medium-banner></app-medium-banner>
   <!--Products Section-->
+  <app-feature-product [productList]="productList"></app-feature-product>
+  <app-best-seller [productList]="productList"></app-best-seller>
+  <!--END Products Section-->
   <app-large-banner></app-large-banner>
   <app-banner-story *ngIf="!isMediumSize"></app-banner-story>
   <app-banner-story-medium *ngIf="isMediumSize"></app-banner-story-medium>

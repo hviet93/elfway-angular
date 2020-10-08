@@ -1,0 +1,12 @@
+<div class="best__seller__container">
+  <div class="best__seller__header">
+    <h1><span class="highlight-text">BEST</span> SELLER</h1>
+  </div>
+  <div class="best__seller__body">
+    <app-product-card
+      *ngFor="let product of bestSellerProductList"
+      [product]="product"
+    >
+    </app-product-card>
+  </div>
+</div>

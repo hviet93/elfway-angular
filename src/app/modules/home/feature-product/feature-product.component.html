@@ -1,0 +1,25 @@
+<div class="feature__product__container">
+  <div class="feature__product__header">
+    <div class="product__header__title">
+      <h1>
+        <span class="highlight-text">FEATURE</span> PRODUCTS
+      </h1>
+    </div>
+    <div class="product__header__tab">
+      <ul (click)="tabSelectedClick($event)">
+        <li
+          *ngFor="let c of categoryList;let i = index"
+          class="{{i === 0 ? 'item-selected' : ''}}"
+        >
+          {{c}}
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="feature__product__body">
+    <app-product-card
+      *ngFor="let product of selectedProductList"
+      [product]="product"
+    ></app-product-card>
+  </div>
+</div>

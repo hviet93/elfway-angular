@@ -1,0 +1,29 @@
+@import "src/app/shares/base";
+
+.about-us__header__container {
+  width: 100%;
+
+  .about-us__header__category {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    span {
+      font-size: 1.4rem;
+      padding: .5rem 2.5rem;
+      border-radius: 5rem;
+      background-color: #fff;
+      margin-right: 1rem;
+    }
+  }
+
+  .about-us__header__text {
+    width: 100%;
+    padding: 1rem 0;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+<div class="product__container">
+  <div class="product__header">
+    <img src="{{product.image}}" alt="product"/>
+    <span class="product__header__zoom">
+      <i class="fas fa-search-plus"></i>
+    </span>
+  </div>
+  <div class="product__body">
+    <div class="product__body__category">
+      <a routerLink="#">{{product.category}}</a>
+    </div>
+    <div class="product__body__title">
+      <a routerLink="#">{{product.name}}</a>
+    </div>
+    <div class="product__body__price">
+      <p>${{product.price}}</p>
+    </div>
+  </div>
+  <div class="product__action">
+    <div class="product__action__left">
+      <button *ngIf="!isMediumSize">
+        ADD TO CART
+      </button>
+      <button *ngIf="isMediumSize">
+        <i class="fas fa-cart-plus"></i>
+      </button>
+    </div>
+    <div class="product__action__right">
+      <span>
+        <i class="far fa-heart"></i>
+      </span>
+      <span>
+        <i class="fas fa-retweet"></i>
+      </span>
+    </div>
+  </div>
+</div>

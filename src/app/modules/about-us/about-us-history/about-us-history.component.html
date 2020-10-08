@@ -1,0 +1,17 @@
+<div class="about-us__history__container">
+  <div *ngFor="let history of historyData" class="about-us__history__col">
+    <div class="history__col__img">
+      <img src="{{history.image}}" alt="About"/>
+    </div>
+    <div class="history__col__content">
+      <div class="col__content__title">
+        <h2>{{history.title}}</h2>
+      </div>
+      <div class="col__content__paragraph">
+        <p>
+          {{history.content}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

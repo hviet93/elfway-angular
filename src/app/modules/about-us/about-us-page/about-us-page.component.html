@@ -1,0 +1,7 @@
+<div class="about__us__container">
+  <app-about-us-header></app-about-us-header>
+  <app-banner-story *ngIf="!isMediumSize"></app-banner-story>
+  <app-banner-story-medium *ngIf="isMediumSize"></app-banner-story-medium>
+  <app-home-elementor></app-home-elementor>
+  <app-about-us-history></app-about-us-history>
+</div>
