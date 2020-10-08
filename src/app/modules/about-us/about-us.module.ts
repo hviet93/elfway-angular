@@ -6,13 +6,15 @@ import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
 import { AboutUsHeaderComponent } from './about-us-header/about-us-header.component';
 import {HomeModule} from '../home/home.module';
 import { AboutUsHistoryComponent } from './about-us-history/about-us-history.component';
+import { AboutUsClientComponent } from './about-us-client/about-us-client.component';
 
 
 @NgModule({
   declarations: [
     AboutUsPageComponent,
     AboutUsHeaderComponent,
-    AboutUsHistoryComponent
+    AboutUsHistoryComponent,
+    AboutUsClientComponent
   ],
   exports: [AboutUsPageComponent],
   imports: [
