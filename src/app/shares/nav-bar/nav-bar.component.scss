@@ -183,6 +183,7 @@
             transition: .4s;
             opacity: 0;
             visibility: hidden;
+            z-index: 2;
 
             .login__form__header {
               width: 100%;
