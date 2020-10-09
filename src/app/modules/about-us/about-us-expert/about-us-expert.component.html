@@ -1,0 +1,37 @@
+<div class="about-us__expert__container">
+  <div class="about-us__expert__header">
+    <div class="expert__header__title">
+      <h1><span class="highlight-text">OUR ORGANIC</span> EXPERTS</h1>
+    </div>
+    <div class="expert__header__paragraph">
+      <p>
+        Ad mea harum elitr audire, te mea invidunt gubergren constituto.
+        Aliquam postulant eam ne, cu falli decore eam.
+      </p>
+    </div>
+  </div>
+  <div class="about-us__expert__body">
+    <div *ngFor="let expert of expertData" class="expert__body__col">
+      <div class="body__col__img">
+        <img src="{{expert.avatar}}" alt="Avatar" />
+      </div>
+      <div class="body__col__info">
+        <div class="col__info__name">
+          <h4>{{expert.name}}</h4>
+        </div>
+        <div class="col__info__job">
+          <p>{{expert.job}}</p>
+        </div>
+        <div class="col__info__paragraph">
+          <p>{{expert.content}}</p>
+        </div>
+        <div class="col__info__social">
+          <span><i class="fab fa-facebook"></i></span>
+          <span><i class="fab fa-twitter"></i></span>
+          <span><i class="fab fa-youtube"></i></span>
+          <span><i class="fab fa-google-plus-g"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

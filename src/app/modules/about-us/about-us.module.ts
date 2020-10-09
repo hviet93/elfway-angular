@@ -7,6 +7,7 @@ import { AboutUsHeaderComponent } from './about-us-header/about-us-header.compon
 import {HomeModule} from '../home/home.module';
 import { AboutUsHistoryComponent } from './about-us-history/about-us-history.component';
 import { AboutUsClientComponent } from './about-us-client/about-us-client.component';
+import { AboutUsExpertComponent } from './about-us-expert/about-us-expert.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AboutUsClientComponent } from './about-us-client/about-us-client.compon
     AboutUsPageComponent,
     AboutUsHeaderComponent,
     AboutUsHistoryComponent,
-    AboutUsClientComponent
+    AboutUsClientComponent,
+    AboutUsExpertComponent
   ],
   exports: [AboutUsPageComponent],
   imports: [
